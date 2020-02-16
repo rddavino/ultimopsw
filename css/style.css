@@ -1,0 +1,113 @@
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.trigger{
+    position: absolute;
+    top: 17px;
+    right: 80px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.trigger a{
+    text-decoration: none;
+}
+
+.row-alocacoes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 20px 0px 40px 0px;
+    
+}
+
+.row-alocacoes p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #6d6d6d;
+}
+
+
+.row-novaalocacao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f3f3;
+
+}
+
+.row-novaalocacao p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #6d6d6d;
+}
+
+.input-pesquisar{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    min-width: 500px;
+}
+
+.pagination{
+    margin-top: 60px;
+}
+
+.direita{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pagination li.active {
+    background-color: #0d47a1;
+}
+
+.datepicker-date-display {
+    background-color: #2261c0;
+}
+
+.modal{
+   
+    top: 25% !important;
+}
+
+.datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done {
+    color: #2261c0;
+}
+
+.datepicker-table td.is-selected {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+input{
+    background-color: #cecece09 !important;
+    border-radius: 4px !important;
+    margin-top: 10px !important;
+    padding:  0px 10px !important;
+    box-sizing: border-box !important;
+    border-bottom: none !important;
+    border: 1px solid #2261c0 !important;
+    
+}
+
+input:focus{
+    border-bottom: none !important;
+    border: 2px solid #ff9800 !important;
+    box-shadow: none !important;
+}
+
+.colunas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sucesso{
+    padding: 15px 0px !important;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}

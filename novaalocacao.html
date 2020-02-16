@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Nova Alocação</title>
+</head>
+
+<body>
+    <!-- header -->
+    <nav>
+        <div class="row nav-wrapper blue darken-4">
+            <div class="container">
+                <a href="index.html" class="brand-logo white-text"><b>ROSE<span class="orange-text">&</span>CIA</b></a>
+            </div>
+        </div>
+    </nav>
+    <!-- fim do header -->
+
+    <!-- menu lateral -->
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <a href="#" class="brand-logo indigo-text"><b>ROSE<span class="orange-text">&</span>CIA</b></a>
+        <li class="blue-grey lighten-5"><a href="#!"><i class="material-icons">directions_walk</i>Fazer Logout</a></li>
+        </div>
+        </li>
+
+        <li class="orange"><a href="index.html"><i class="material-icons  white-text">date_range</i> <span
+                    class=" white-text">
+                    ALOCAÇÕES</span></a></li>
+        <li><a class="subheader">Cadastros</a></li>
+        <li><a href="#!"><i class="material-icons">insert_emoticon</i>CLIENTES</a></li>
+        <li><a href="#!"><i class="material-icons">local_shipping</i>CAMINHÕES</a></li>
+        <li><a href="#!"><i class="material-icons">apps</i>EQUIPAMENTOS</a></li>
+        <li><a href="#!"><i class="material-icons">assignment_ind</i>MOTORISTAS</a></li>
+        <li><a href="#!"><i class="material-icons">group</i>USUÁRIOS</a></li>
+
+
+
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Relatórios</a></li>
+        <li><a href="#!"><i class="material-icons">assessment</i>RELATÓRIO 1</a></li>
+        <li><a href="#!"><i class="material-icons">assessment</i>RELATÓRIO 2</a></li>
+    </ul>
+    <!-- fim do menu lateral-->
+
+    <!-- botao menu na lateral superior esquerda -->
+    <div class="trigger">
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i
+                class="white-text small material-icons">menu</i></a>
+    </div>
+    <!-- fim botao menu na lateral superior esquerda -->
+
+    <!-- subtitulo -->
+    <div id="alocacaoes" class="row row-novaalocacao">
+        <div class="container">
+            <p class="col l12">NOVA ALOCAÇÃO</p>
+        </div>
+    </div>
+    <!-- fim do subtitulo -->
+
+    <!-- INÍCIO DO CONTEÚDO PRINCIPAL -->
+
+    <div class="container">
+        <div>
+            <div class="row">
+                <p class="col l12 deep-purple-text">
+                    <b>1. Verifique a disponibilidade do equipamento para as datas
+                        desejadas:</b>
+                </p>
+            </div>
+
+
+
+            <div class="row">
+                <!-- PRIMEIRA PARTE FORMULÁRIO: VERIFICAR DISPONIBILIDADE: -->
+                <div class="col l12">
+                    <!-- linha equipamento e datas -->
+                    <form action="" class="row">
+                        <div class="input-field col l6">
+                            <input placeholder="Selecione o equipamento a ser alocado" id="equipamento_alocado"
+                                type="text" class="validate">
+                            <label for="equipamento_alocado">Equipamento</label>
+                        </div>
+                        <div class="input-field col l3">
+                            <input placeholder="Data de início da locação" id="data-inicio" type="text"
+                                class="validate datepicker">
+                            <label for="data-inicio">Início</label>
+                        </div>
+                        <div class="input-field col l3">
+                            <input placeholder="Data do fim da locação" id="data-fim" type="text"
+                                class="validate datepicker">
+                            <label for="data-fim">Término</label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- botao para verificar disponibilidade -->
+                <div class="col l12">
+                    <div class="row">
+                        <div id="verificar-disponibilidade" class="col l3">
+                            <div class="btn-large orange"><b>Verificar disponibilidade</b>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- SEGUNDA PARTE FORMULÁRIO: VERIFICAR DISPONIBILIDADE -->
+                <div id="formulario-parte2">                
+    
+                    <div class="row">
+                        <p class="col l3 sucesso green lighten-5 green-text center-align">
+                           <b> EQUIPAMENTO DISPONÍVEL!</b>
+                        </p>
+                        <p class="col l12 deep-purple-text">
+                            <b>2. Preencha os campos abaixo para alocar o equipamento informado:</b>
+                        </p>
+                    </div>
+
+                    <!-- linha cliente e obra -->
+                    <div class="row">
+                        <form action="" class="col s12">
+                            <div class="row">
+                                <div class="input-field col l4">
+                                    <input id="cliente-contratante" type="text" placeholder="Informe o cliente"
+                                        class="validate">
+
+                                    <label for="cliente-contratante">Cliente</label>
+                                </div>
+
+                                <div class="input-field col l5">
+                                    <input id="obra" type="text"
+                                        placeholder="Informe o local onde o equipamento ficará alocado"
+                                        class="validate datepicker">
+
+                                    <label for="obra">Obra</label>
+                                </div>
+                            </div>
+
+                            <!-- linha valor combinado e botão -->
+                            <div class="row">
+                                <div class="input-field col l4">
+                                    <input id="valor-combinado" type="text" placeholder="R$ 0,00" class="validate">
+
+                                    <label for="valor-combinado">Valor combinado</label>
+                                </div>
+
+                                <div class="input-field col l3">
+                                    <div class="btn-large green"><b>ALOCAR EQUIPAMENTO</b></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
