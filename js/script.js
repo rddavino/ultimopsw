@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('.sidenav').sidenav();
     $('#cliente').formSelect();
-    $('#codVeiculo').formSelect();
+    $('#veiculo').formSelect();
     $('#obra').formSelect();
 
     $.ajax({
@@ -100,10 +100,10 @@ $(document).ready(function () {
                 dataFim: dataFim
             },
             success: function(result){
-                console.log(result);
+                swal("Alocação realizada com sucesso", "Parabéns!", "success");
             },
             error: function(error){
-                console.log(error);
+                swal("Alocação não realizada", "Tente novamente", "error");
             }
         });
     });
