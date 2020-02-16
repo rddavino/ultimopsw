@@ -109,5 +109,5 @@ input:focus{
     padding: 15px 0px !important;
     letter-spacing: 1px;
     border-radius: 8px;
-    box-sizing: border-box;
+    box-sizing: border-box  ;
 }

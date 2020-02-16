@@ -87,11 +87,12 @@
                 <!-- PRIMEIRA PARTE FORMULÁRIO: VERIFICAR DISPONIBILIDADE: -->
                 <div class="col l12">
                     <!-- linha equipamento e datas -->
-                    <form action="" class="row">
+                    <form id="form1" action="" class="row">
                         <div class="input-field col l6">
-                            <input placeholder="Selecione o equipamento a ser alocado" id="equipamento_alocado"
-                                type="text" class="validate">
-                            <label for="equipamento_alocado">Equipamento</label>
+                            <select id="veiculo">
+                              <option value="" disabled selected>Selecione o equipamento a ser alocado</option>
+                            </select>
+                            <label>Equipamento</label>
                         </div>
                         <div class="input-field col l3">
                             <input placeholder="Data de início da locação" id="data-inicio" type="text"
@@ -133,24 +134,21 @@
 
                     <!-- linha cliente e obra -->
                     <div class="row">
-                        <form action="" class="col s12">
+                        <form id="form2" action="" class="col s12">
                             <div class="row">
-                                <div class="input-field col l4">
-                                    <input id="cliente-contratante" type="text" placeholder="Informe o cliente"
-                                        class="validate">
-
-                                    <label for="cliente-contratante">Cliente</label>
+                                <div class="input-field col 14">
+                                    <select id="cliente">
+                                      <option value="" disabled selected>Selecione um cliente</option>
+                                    </select>
+                                    <label>Cliente</label>
                                 </div>
-
-                                <div class="input-field col l5">
-                                    <input id="obra" type="text"
-                                        placeholder="Informe o local onde o equipamento ficará alocado"
-                                        class="validate datepicker">
-
-                                    <label for="obra">Obra</label>
+                                <div class="input-field col 15">
+                                    <select id="obra">
+                                      <option value="" disabled selected>Selecione a obra</option>
+                                    </select>
+                                    <label>Obra</label>
                                 </div>
                             </div>
-
                             <!-- linha valor combinado e botão -->
                             <div class="row">
                                 <div class="input-field col l4">
@@ -160,7 +158,7 @@
                                 </div>
 
                                 <div class="input-field col l3">
-                                    <div class="btn-large green"><b>ALOCAR EQUIPAMENTO</b></div>
+                                    <div id="alocar" class="btn-large green"><b>ALOCAR EQUIPAMENTO</b></div>
                                 </div>
                             </div>
                         </form>
